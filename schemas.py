@@ -12,3 +12,13 @@ class MedioDePagoSchema (BaseModel):
     nombre : str
     descripcion : str
     usuarioID : int
+
+class UsuarioSchema (BaseModel):
+    nombre : str
+    apellido : str
+    correo : str 
+    contrasena : str
+
+class LoginSchema (BaseModel):
+    correo : str 
+    contrasena : str 

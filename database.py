@@ -35,7 +35,23 @@ def crear_tabla_MediosDePago(): # FUNCION QUE CREA LA TABLA MEDIOS DE PAGO
     conn.commit()
     conn.close()
 
+def crear_tabla_usuarios(): # FUNCION QUE CREA LA TABLA usuario 
+    conn = conectar_con_la_base()
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS usuarios (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nombre TEXT NOT NULL,
+            apellido TEXT NOT NULL,
+            correo TEXT NOT NULL,
+            contrasena TEXT NOT NULL
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
 if __name__ == "__main__":
     crear_tabla_gastos()
     crear_tabla_MediosDePago()
+    crear_tabla_usuarios()
     print("Tablas creadas correctamente.")
