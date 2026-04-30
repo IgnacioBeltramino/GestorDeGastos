@@ -1,11 +1,11 @@
 import sqlite3
 
-def conectar_con_la_base (): # CON ESTO SOLO ME CONECTO A LA BASE 
+def conectar_con_la_base (): # CON ESTO SOLO ME CONECTO A LA BASE
     return sqlite3.connect("GestorDeGastos.db", check_same_thread=False, timeout=10)
 
 
 
-def crear_tabla_gastos(): # FUNCION QUE CREA LA TABLA GASTOS 
+def crear_tabla_gastos(): # FUNCION QUE CREA LA TABLA GASTOS
     conn = conectar_con_la_base()
     cursor = conn.cursor()
     cursor.execute('''

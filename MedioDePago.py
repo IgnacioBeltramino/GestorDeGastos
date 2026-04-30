@@ -7,7 +7,7 @@ class MedioDePago:
         try: # VALIDACIONES DEL NOMBRE
             if (nombre == None or nombre.strip() == ""):
                 raise ValueError ("El nombre del medio de pago no puede estar vacio")
-            else: 
+            else:
                 self.nombre = nombre
         except ValueError as NombreMedioDePagoIncorrecto:
             print (NombreMedioDePagoIncorrecto)
@@ -16,7 +16,7 @@ class MedioDePago:
         try: # VALIDACIONES DE LA DESCRIPCION
             if (descripcion == None or descripcion.strip() == ""):
                 raise ValueError ("La descripcion no puede estar vacia")
-            else: 
+            else:
                 self.descripcion = descripcion
         except ValueError as DescMedioDePagoIncorrecta:
             print (DescMedioDePagoIncorrecta)

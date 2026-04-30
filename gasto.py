@@ -1,10 +1,10 @@
-from datetime import date, datetime 
+from datetime import date, datetime
 
 
 class Gasto:
-    #constructor 
+    #constructor
     def __init__(self, monto, IDmedioDePago, descripcion, fecha, id = None, usuarioID = None):
-        fechaActual = date.today() # FIJO LA FECHA Y HORA ACTUAL AL MOMENTO DE LLAMAR AL CONSTRUC 
+        fechaActual = date.today() # FIJO LA FECHA Y HORA ACTUAL AL MOMENTO DE LLAMAR AL CONSTRUC
         self.usuarioID = usuarioID
         self.IDmedioDePago = IDmedioDePago
 
@@ -12,7 +12,7 @@ class Gasto:
             if (monto == None or monto <= 0):
                 raise ValueError ("El monto del gasto no puede ser negativo ni 0")
             else:
-                self.monto = monto 
+                self.monto = monto
         except ValueError as montoIncorrecto:
             print (montoIncorrecto)
             raise
@@ -20,11 +20,11 @@ class Gasto:
         try: # VALIDACIONES DE LA DESCRIPCION
             if (descripcion == None or descripcion.strip() == ""):
                 raise ValueError ("La descripcion no puede estar vacia")
-            else: 
+            else:
                 self.descripcion = descripcion
         except ValueError as DescGastoIncorrecta:
             print (DescGastoIncorrecta)
-            raise 
+            raise
 
         try: # VALIDACIONES DE LA FECHA
             if (fecha > fechaActual):
@@ -36,5 +36,3 @@ class Gasto:
             raise
 
 
-
-        
