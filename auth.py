@@ -16,6 +16,7 @@ def validar_contrasena(correo, contrasena_a_validar):
         contraseña_correcta = pwd_context.verify(contrasena_a_validar, contrasena_del_usuario[0])# esto guarda true o false
         return contraseña_correcta
     
+
 def generar_token (correo: str):
     payload = {"sub": correo}
     token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)

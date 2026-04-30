@@ -44,7 +44,9 @@ def crear_tabla_usuarios(): # FUNCION QUE CREA LA TABLA usuario
             nombre TEXT NOT NULL,
             apellido TEXT NOT NULL,
             correo TEXT NOT NULL,
-            contrasena TEXT NOT NULL
+            contrasena TEXT NOT NULL,
+            token_blanqueo TEXT,
+            fecha_token_blanqueo DATE
         )
     ''')
     conn.commit()

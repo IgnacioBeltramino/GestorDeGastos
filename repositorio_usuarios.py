@@ -38,3 +38,4 @@ def obtener_contrasena_por_correo(correo:str):
     resultado = cursor.fetchone()
     conn.close()
     return resultado
+
